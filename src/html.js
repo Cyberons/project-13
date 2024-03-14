@@ -7,3 +7,8 @@ import 'swiper/css';
 import Accordion from 'accordion-js';
 // import Accordion styles
 import 'accordion-js/dist/accordion.min.css';
+
+import "./js/accordion";
+import "./js/menu";
+import "./js/modal";
+import "./js/swiper";
