@@ -34,7 +34,9 @@
     letter-spacing: -0.02em;
     color: rgba(250, 250, 250, 0.6);
     padding-top: 16px;
-    width: 343px;
+}
+
+.hidden {
     display: none;
 }
 
@@ -79,6 +81,6 @@
     }
 
     .faq-item-text {
-        width: 640px;
+        width: 627px;
     }
    }
