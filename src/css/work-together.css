@@ -264,6 +264,10 @@
 }
 
 @media screen and (min-width: 1440px){
+    .footer {
+         margin-left: 193px;
+         margin-bottom: 169px;
+    }
     .email,
     .comments {
         width: 390px;
