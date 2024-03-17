@@ -12,5 +12,5 @@ import "./js/accordion";
 import "./js/menu";
 import "./js/modal";
 import "./js/swiper";
-import "./js/faq-acordion";
+import "./js/faq";
 
