@@ -3,6 +3,9 @@
     visibility: hidden;
 }
 
+.div-right {
+    background-color: #242527;
+}
 
 .section-project {
      background: #1c1d20;
@@ -244,7 +247,7 @@ color: rgba(250, 250, 250, 0.4);
     height: 625px;
     margin-left: auto;
     margin-right: auto;
-    background: #1c1d20;
+    /* background: #1c1d20; */
 }
 
 /* img {
