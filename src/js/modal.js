@@ -40,22 +40,65 @@ sendButton.addEventListener('click', function(event) {
     event.preventDefault();
 
     if (emailInput.value.trim() === '') {
-        // Якщо поле порожнє, не відправляємо форму і відображаємо порожнє повідомлення
         message.textContent = '';
     } else if (!emailInput.checkValidity()) {
-        // Якщо поле заповнене, але значення недійсне, не відправляємо форму і відображаємо помилку
         emailInput.classList.remove('success');
         emailInput.classList.add('error');
         message.textContent = 'Invalid email, try again';
         message.classList.add('error-message');
         message.classList.remove('success-message');
     } else {
-        // Якщо поле заповнене і значення дійсне, відправляємо форму і очищаємо повідомлення
         modalContainer.style.display = 'block';
         message.textContent = '';
+        emailInput.value = '';
+        commentsInput.value = '';
+        emailInput.classList.remove('success', 'error'); 
+        commentsInput.classList.remove('error');
     }
 });
 
 closeButton.addEventListener('click', function() {
     modalContainer.style.display = 'none';
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var emailInput = document.querySelector('.footer-form .email');
+    var commentsInput = document.querySelector('.footer-form .comments');
+    var feedbackForm = document.querySelector('.footer-form');
+
+    function saveStateToLocalStorage() {
+        var state = {
+            email: emailInput.value,
+            comments: commentsInput.value
+        };
+        localStorage.setItem('feedback-form-state', JSON.stringify(state));
+    }
+
+    var savedState = localStorage.getItem('feedback-form-state');
+    if (savedState) {
+        savedState = JSON.parse(savedState);
+        emailInput.value = savedState.email;
+        commentsInput.value = savedState.comments;
+    }
+
+    feedbackForm.addEventListener('input', function(event) {
+        if (event.target.matches('.email, .comments')) {
+            saveStateToLocalStorage();
+        }
+    });
+
+    feedbackForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        localStorage.removeItem('feedback-form-state');
+
+        var formData = {
+            email: emailInput.value,
+            comments: commentsInput.value
+        };
+        console.log(formData);
+
+        emailInput.value = '';
+        commentsInput.value = '';
+    });
 });
