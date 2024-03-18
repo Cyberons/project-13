@@ -12,4 +12,8 @@ import "./js/accordion";
 import "./js/menu";
 import "./js/modal";
 import "./js/swiper";
+
+import "./js/faq";
+
 import "./js/api";
+
