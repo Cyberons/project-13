@@ -121,12 +121,12 @@ color: rgba(250, 250, 250, 0.4);
     margin-right: auto;
 }
 
-img {
+/* img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
     margin-bottom: 100px;
-}
+} */
 
 .arrows {
     display: flex;
@@ -250,14 +250,14 @@ img {
     /* background: #1c1d20; */
 }
 
-img {
+/* img {
     width: 614px;
     height: 385px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
     margin-bottom: 100px;
-}
+} */
 
 .image {
     width: 614px;
