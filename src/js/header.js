@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const navList = document.querySelector('.nav-list');
   const navLinks = document.querySelectorAll('.nav-item');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const closeButton = document.querySelector('.close-button');
+  const mobileButtonLink = document.querySelector('.mobile-button-link');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav .nav-item');
 
   function toggleNav() {
     navList.classList.toggle('active');
@@ -37,13 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   menu.addEventListener('click', handleMenuClick);
   document.addEventListener('click', handleOutsideMenuClick);
-  const mobileMenuButton = document.querySelector('.mobile-menu-button');
-  const closeButton = document.querySelector('.close-button');
-
   mobileMenuButton.addEventListener('click', openMobileMenu);
   closeButton.addEventListener('click', closeMobileMenu);
+  mobileButtonLink.addEventListener('click', closeMobileMenu);
 
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav .nav-item');
   mobileNavLinks.forEach(link => {
     link.addEventListener('click', handleMobileNavItemClick);
   });
