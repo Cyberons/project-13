@@ -13,12 +13,15 @@ const accordions = accordionContainer.map(container =>
   container.querySelector('.accordion-list')
 );
 
-new Accordion(accordions, {
+const acTextAboutMeElements = Array.from(document.querySelectorAll('.ac-text-about-me'));
+
+// Ініціалізуємо акордеон
+const myAccordion = new Accordion(accordions, {
     showMultiple: true,
     elementClass: 'accordion-element',
     triggerClass: 'accordion-title',
     panelClass: 'accordion-description',
-    openOnInit: [0],
+    openOnInit: [], // Відкриваємо всі елементи за замовчуванням
     onOpen: function (currentElement) {
         currentElement.querySelector('.accordion-title').classList.add('active');
     },
@@ -27,8 +30,18 @@ new Accordion(accordions, {
     },
 });
 
-const firstAccordionTitle = accordions[0].querySelector('.accordion-title');
-firstAccordionTitle.classList.add('active');
+// Додаємо обробник подій для елементів .ac-text-about-me
+acTextAboutMeElements.forEach(element => {
+    element.addEventListener('click', function() {
+        const accordionPanel = this.closest('.accordion-element').querySelector('.accordion-description');
+        if (accordionPanel.classList.contains('active')) {
+            accordionPanel.classList.remove('active');
+        } else {
+            accordionPanel.classList.add('active');
+        }
+    });
+});
+
 
 ////////////////////////SWIPER CODE//////////////////////////////
 
