@@ -1,7 +1,7 @@
 'use strict';
 import axios from 'axios';
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
 const url = 'https://portfolio-js.b.goit.study/api/reviews';
@@ -28,7 +28,6 @@ getData()
           slidesPerView: 2,
           spaceBetween: 16,
         },
-
         1440: {
           slidesPerView: 4,
           spaceBetween: 18,
@@ -44,6 +43,9 @@ getData()
       mousewheel: {
         invert: true,
       },
+      allowSlideNext: true,
+      modules: [Navigation, Keyboard, Mousewheel], // Додаємо модулі для навігації, клавіатури та миші
+      allowTouchMove: true, // Дозволяємо торкання для переміщення слайдів на сенсорних пристроях
     });
   })
   .catch(error => {
@@ -68,4 +70,4 @@ function createElement(data) {
   list.insertAdjacentHTML('beforeend', markup);
 }
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Keyboard, Mousewheel]);
