@@ -15,6 +15,10 @@
 @import url('./work-together.css');
 @import url('./reviews.css');
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'Inter Tight';
   src: url('../fonts/InterTight-Medium.ttf') format('truetype');
