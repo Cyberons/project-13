@@ -2,38 +2,49 @@ document.addEventListener('DOMContentLoaded', function () {
   const menu = document.querySelector('.nav-menu');
   const navList = document.querySelector('.nav-list');
   const navLinks = document.querySelectorAll('.nav-item');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-  menu.addEventListener('click', function (e) {
-    e.stopPropagation(); // Щоб подія не викликалася на батьківських елементах
+  function toggleNav() {
     navList.classList.toggle('active');
-
     navLinks.forEach(link => {
       link.classList.toggle('active');
     });
-  });
+  }
 
-  document.addEventListener('click', function (e) {
+  function handleMenuClick(e) {
+    e.stopPropagation();
+    toggleNav();
+  }
+
+  function handleOutsideMenuClick(e) {
     const isClickInsideMenu = menu.contains(e.target);
     if (!isClickInsideMenu && navList.classList.contains('active')) {
-      navList.classList.remove('active');
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-      });
+      toggleNav();
     }
-  });
-});
+  }
 
-document.addEventListener('DOMContentLoaded', function () {
+  function handleMobileNavItemClick() {
+    closeMobileMenu();
+  }
+
+  function openMobileMenu() {
+    mobileMenu.classList.add('is-open');
+  }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('is-open');
+  }
+
+  menu.addEventListener('click', handleMenuClick);
+  document.addEventListener('click', handleOutsideMenuClick);
   const mobileMenuButton = document.querySelector('.mobile-menu-button');
   const closeButton = document.querySelector('.close-button');
 
-  const mobileMenu = document.querySelector('.mobile-menu');
+  mobileMenuButton.addEventListener('click', openMobileMenu);
+  closeButton.addEventListener('click', closeMobileMenu);
 
-  mobileMenuButton.addEventListener('click', function () {
-    mobileMenu.classList.add('is-open');
-  });
-
-  closeButton.addEventListener('click', function () {
-    mobileMenu.classList.remove('is-open');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav .nav-item');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', handleMobileNavItemClick);
   });
 });
