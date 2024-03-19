@@ -1,14 +1,14 @@
 <header class="container header">
   <div class="logo">
-    <a href="../index.html" class="logo-link">
-      <img src="../img/header/logo.png" alt="logo">
+    <a href="./index.html" class="logo-link">
+      <img src="./img/header/logo_header.png" alt="logo">
       <p class="logo-text">jefferson*</p>
     </a>
 
   </div>
   <nav class="nav">
     <ul class="nav-list">
-      <li class="nav-item nav-menu">
+      <li class="nav-list nav-menu">
         <a href="#" class="nav-link ">Menu</a>
       </li>
       <li class="nav-item">
@@ -30,7 +30,43 @@
   </div>
   <button class="mobile-menu-button" type="button">
     <svg width="28" height="28" class="mobile-menu-icon">
-      <use href="../img/symbol-defs.svg#icon-menu"></use>
+      <use href="./img/symbol-defs.svg#icon-menu"></use>
     </svg>
   </button>
+
+  <!-- mobile -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-top">
+        <button class="close-button">
+          <svg width="28" height="28" class="close-button-icon">
+            <use href="../img/symbol-defs.svg#icon-x"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list active">
+          <li class="nav-list nav-menu">
+            <a href="#" class="nav-link  ">Menu</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#" class="nav-link  ">About me</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#" class="nav-link ">Benefits</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#" class="nav-link ">Projects</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#" class="nav-link ">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="button-wrap">
+        <a href="#" class="header-button">Order the project</a>
+      </div>
+    </div>
+  </div>
+  <script src="./js/header.js"></script>
 </header>
