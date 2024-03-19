@@ -128,6 +128,10 @@ color: rgba(250, 250, 250, 0.4);
     margin-bottom: 100px;
 } */
 
+.img-projects {
+    margin-top: 120px;
+}
+
 .arrows {
     display: flex;
     flex-wrap: wrap;
@@ -269,6 +273,10 @@ color: rgba(250, 250, 250, 0.4);
     margin-bottom: 100px;
 }
 
+.img-projects {
+    margin-top: 120px;
+}
+   
 .arrows {
     display: flex;
     flex-wrap: wrap;
