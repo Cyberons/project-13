@@ -16,4 +16,4 @@ import "./js/about-me"
 import "./js/faq";
 import "./js/api";
 import "./js/header"
-
+import "./js/rewies"
