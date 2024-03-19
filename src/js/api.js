@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', async function renderEvent() {
 function initSwiper() {
   const swiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
+    spaceBetween: 16,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -90,10 +91,12 @@ function initSwiper() {
 
   sliderNext.addEventListener('click', () => {
     swiper.slideNext(500);
+    updateNavButtons();
   });
 
   sliderPrev.addEventListener('click', () => {
     swiper.slidePrev(500);
+    updateNavButtons();
   });
 
   function updateNavButtons() {
