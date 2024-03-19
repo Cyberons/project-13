@@ -1,0 +1,60 @@
+.bg {
+    background-image: url("../img/covers-img/bg-color.png");
+    background-repeat: no-repeat;
+    background-color: inherit;
+    background-size: cover;
+}
+
+  .marquee {
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 34px;
+    text-transform: uppercase;
+    height: 508px;
+  }
+  
+  .marquee__inner {
+     padding-bottom: 50px;
+     display: flex;
+     transform: rotate(16deg);
+     justify-content: center;
+     align-items: center;
+  }
+  
+  .marquee__line {
+    flex-shrink: 0;
+    margin-right: 40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 2); 
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes marqueeLine {
+    from {
+      transform: translateX(-20%);
+    }
+    
+    to {
+      transform: translateX(-180%);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .marquee {
+        height: 960px;
+    }
+   }
+
+   @media screen and (min-width: 1440px) {
+    .marquee__line {
+        margin-right: -114px;
+    }
+   }
+   
