@@ -158,8 +158,7 @@ color: rgba(250, 250, 250, 0.4);
 
 @media screen and (min-width: 375px) {
     .section-project {
-            width: 374px;
-            height: 960px;   
+            width: 374px;  
         }
 
 .div-projects {
@@ -278,7 +277,6 @@ color: rgba(250, 250, 250, 0.4);
 
 .section-project {
         width: 768px;
-        height: 1447px;
     }
 .heder-section-projects {
     margin-left: 32px;
@@ -396,8 +394,7 @@ color: rgba(250, 250, 250, 0.4);
 @media screen and (min-width: 1440px) {
 
 .section-project {
-            width: 1440px;
-            height: 813px;         
+            width: 1440px;         
  }
   
 .heder-section-projects {
