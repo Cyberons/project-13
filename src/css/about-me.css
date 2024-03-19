@@ -169,8 +169,8 @@
 
 .skills-swiper-wrapper .skill-slide {
     display: flex;
-    width: 130px;
-    height: 130px;
+    width: 130px !important;
+    height: 130px !important;
     align-items: center;
     justify-content: center;
     font-family: 'Inter Tight', sans-serif;
