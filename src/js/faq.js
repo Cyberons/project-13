@@ -9,11 +9,11 @@ button.forEach(function(button) {
         if (paragraph.classList.contains('hidden')){
             paragraph.classList.remove("hidden");
             paragraph.classList.add("show");
-            svg.src = "../img/faq-picture/close-icon.svg"
+            svg.src = "./img/faq-picture/close-ico.svg"
         } else {
             paragraph.classList.add("hidden")
             paragraph.classList.remove("show");
-            svg.src = "../img/faq-picture/open-icon.svg"
+            svg.src = "./img/faq-picture/open-ico.svg"
         }
         })
 })
