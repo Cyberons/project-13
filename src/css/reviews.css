@@ -1,7 +1,6 @@
 /* Mobile styles */
 
 .reviews {
-  
   padding-bottom: 32px;
 }
 
@@ -9,6 +8,7 @@
   color: #fafafa66;
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   margin-bottom: 32px;
@@ -77,8 +77,11 @@
   border-radius: 60%;
   cursor: pointer;
   transition: all 300ms ease-in;
+  background-color: #1c1d20;
 }
-
+.reviews-btn-left-icon {
+  transform: scaleX(-1);
+}
 .arrow-item {
   width: 24px;
   height: 24px;
@@ -124,7 +127,6 @@
 
 @media screen and (min-width: 768px) {
   .reviews {
-    
     padding-bottom: 48px;
   }
 
