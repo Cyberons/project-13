@@ -45,8 +45,5 @@ new Accordion(accordions, {
     },
 });
 
-const accordionTitle = accordions[0].querySelector('.faq-container');
-accordionTitle.classList.add('active');
-
 
 
