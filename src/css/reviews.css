@@ -1,7 +1,7 @@
 /* Mobile styles */
 
 .reviews {
-  padding-top: 32px;
+  
   padding-bottom: 32px;
 }
 
@@ -124,7 +124,7 @@
 
 @media screen and (min-width: 768px) {
   .reviews {
-    padding-top: 48px;
+    
     padding-bottom: 48px;
   }
 
@@ -148,7 +148,6 @@
 
 @media screen and (min-width: 1140px) {
   .reviews {
-    padding-top: 82px;
     padding-bottom: 82px;
   }
 
