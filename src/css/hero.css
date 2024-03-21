@@ -4,13 +4,12 @@
 }
 
 .hero-section {
-  background: linear-gradient(
-    90deg,
-    #ed3b44 15.68%,
-    #69292d 51.73%,
-    #1c1d20 129%
-  );
+  background-repeat: no-repeat;
+    background-size: 60% 100%;
+    min-height: 812px;
+  background-image: url('../img/Hero.png');;
 }
+
 .hero-title {
   padding: 281px 0 162px;
 }
