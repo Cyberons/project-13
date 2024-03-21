@@ -34,7 +34,7 @@ color: rgba(250, 250, 250, 0.4);
     width: 177px;
     height: 555px;
     background-color: #ED3B44;
-    border: 0 solid #ED3B44;
+
 
     font-family: "Inter Tight", sans-serif;
     font-weight: 500;
@@ -44,6 +44,7 @@ color: rgba(250, 250, 250, 0.4);
 
     margin-left: 64px;
     margin-bottom: 64px;
+    padding-top: 12px;
 }
 /* ====================================================== */
 @media screen and (min-width: 320px) and (max-width: 374px){
@@ -105,6 +106,22 @@ color: rgba(250, 250, 250, 0.4);
     height: 45px;
     margin-left: 32px;
     margin-bottom: 32px;
+}
+
+.btn-projects {
+    margin-left: 32px;
+    margin-top: 32px;
+}
+
+.btn-link {
+    width: 141px;
+    height: 45px;
+    display: block;
+    background-color: #ed3b44;
+    border-radius: 60px;
+    padding: 11px 28px;
+    transition: all .25s cubic-bezier(.4, 0, .2, 1);
+
 }
 
 
@@ -215,12 +232,20 @@ color: rgba(250, 250, 250, 0.4);
     color: #1c1d20;
 }
 
-.btn {
+.btn-projects {
+    margin-left: 32px;
+    margin-top: 32px;
+}
 
+.btn-link {
     width: 141px;
     height: 45px;
-    margin-left: 32px;
-    margin-bottom: 32px;
+    display: block;
+    background-color: #ed3b44;
+    border-radius: 60px;
+    padding: 11px 28px;
+    transition: all .25s cubic-bezier(.4, 0, .2, 1);
+
 }
 /* ----------------------------------------------- */
 .div-right {
@@ -333,13 +358,20 @@ color: rgba(250, 250, 250, 0.4);
 
 }
 
-.btn {
-    border-radius: 60px;
+.btn-projects {
+    margin-left: 64px;
+    margin-top: 64px;
+}
+
+.btn-link {
     width: 177px;
     height: 55px;
-    margin-left: 64px;
-    margin-bottom: 64px;
-    margin-top: 32px;
+        display: block;
+        background-color: #ed3b44;
+        border-radius: 60px;
+        padding: 18px 48px;
+        transition: all .25s cubic-bezier(.4, 0, .2, 1);
+
 }
 
 /* ---------------------------------------------  */
@@ -350,7 +382,7 @@ color: rgba(250, 250, 250, 0.4);
     margin-left: auto;
     margin-right: auto;
 }
-
+/*
 .image {
 
     width: 614px;
