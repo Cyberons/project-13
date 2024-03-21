@@ -5,6 +5,16 @@ var sendButton = document.querySelector('.footer-form .send-btn');
 var modalContainer = document.querySelector('.modal-container');
 var closeButton = document.querySelector('.close-btn');
 
+
+function disableBodyScroll() {
+    document.body.style.overflow = 'hidden';
+}
+
+function enableBodyScroll() {
+    document.body.style.overflow = '';
+}
+
+
 emailInput.addEventListener('blur', function() {
     if (emailInput.value.trim() === '') {
         // Якщо поле порожнє, не застосовуємо стилі і відображаємо порожнє повідомлення
@@ -48,6 +58,8 @@ sendButton.addEventListener('click', function(event) {
         message.classList.add('error-message');
         message.classList.remove('success-message');
     } else {
+        disableBodyScroll();
+
         modalContainer.style.display = 'block';
         message.textContent = '';
         emailInput.value = '';
@@ -58,6 +70,7 @@ sendButton.addEventListener('click', function(event) {
 });
 
 closeButton.addEventListener('click', function() {
+    enableBodyScroll();
     modalContainer.style.display = 'none';
 });
 
