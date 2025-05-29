@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../portfolio"
+		},
+		{
+			"path": "../node_modules"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../.git"
+		},
+		{
+			"path": "../.github"
+		},
+		{
+			"path": "../assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "src"
+	}
+}

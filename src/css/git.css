@@ -1,0 +1,44 @@
+
+.lan-contaienr{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.lan{
+    display: flex;
+    align-items: center;
+    width: 343px;
+    height: 300px;
+    justify-content: center;
+    background-color: #242527;
+    border-radius: 20px;
+    border: 1px solid #fafafa33;
+    transition-duration: 0.4s;
+}
+
+.lan:hover{
+    background-color: #7432d6;
+    border: none;
+}
+
+@media screen and (min-width: 768px) {
+    .lan{
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .lan-contaienr{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .lan{
+        width: 100%;
+        height: 200px;
+    }
+}

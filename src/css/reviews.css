@@ -79,8 +79,16 @@
   transition: all 300ms ease-in;
   background-color: #1c1d20;
 }
+
+.reviews-btn:hover,
+.reviews-btn:active{
+  background-color: #7432d6;
+  border: 0px solid #7432d6;
+}
+
 .reviews-btn-left-icon {
   transform: scaleX(-1);
+
 }
 .arrow-item {
   width: 24px;

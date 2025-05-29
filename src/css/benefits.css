@@ -37,7 +37,7 @@ margin-bottom: 32px;
 .icon-wrap {
   width: 48px;
   height: 48px; 
-background-color: #ED3B44;
+background-color:  #7432d6;
 border-radius: 10px;
 display: flex;
 align-items: center;
@@ -75,8 +75,14 @@ font-weight: 500;
             width: 187px;
             height: 55px;
            margin-top: 32px;
+           transition-duration: 0.4s;
 }
 
+.benefits-link:hover,
+.benefits-link:focus{
+    background-color: #7432d6;
+    border: none;
+}
 
 
 

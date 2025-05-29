@@ -27,16 +27,17 @@
         Programming Across Borders: Ideas, Technologies, Innovations
       </h3>
 
-      <button class="btn">
-        See project
-        <a
-          class="btn-link"
-          href="https://cyberons.github.io/project-13/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="project 13"
-        ></a>
-      </button>
+      <a
+  class="btn-link"
+  href="https://cyberons.github.io/project-13/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="project 13"
+>
+  <button class="btn">
+    See project
+  </button>
+</a>
     </div>
 
     <div class="div-right">
@@ -152,12 +153,12 @@
   <ul class="arrows">
     <li class="icon-arrow">
       <a
-        class="link"
+        class="link left-icon"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="goit"
       >
-        <svg class="left-icon" width="24" height="24">
+        <svg class="" width="24" height="24">
           <use
             class="use-image"
             href="./img/symbol-defs.svg#icon-arrow-narrow-left"
@@ -168,12 +169,12 @@
 
     <li class="icon-arrow">
       <a
-        class="link"
+        class="link right-icon"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="goit"
       >
-        <svg class="right-icon" width="24" height="24">
+        <svg class="" width="24" height="24">
           <use href="./img/symbol-defs.svg#icon-arrow-narrow-left"></use>
         </svg>
       </a>
@@ -191,6 +192,7 @@
       pagination: {
         el: '.swiper-pagination',
       },
+      
 
       // Navigation arrows
       navigation: {
@@ -208,6 +210,24 @@
       //     el: '.swiper-scrollbar',
       // },
     });
+    const projectLinks = [
+    "https://cyberons.github.io/project-13/",    // для 1 слайду
+    "https://example.com/project-2",             // для 2 слайду
+    "https://example.com/project-3",             // для 3 слайду
+  ];
+
+  const btnLink = document.querySelector(".btn-link");
+
+  // Оновлення посилання під час зміни слайду
+  swiper.on("slideChange", function () {
+    // Визначаємо активний індекс
+    const realIndex = swiper.realIndex;
+    btnLink.href = projectLinks[realIndex];
+    btnLink.setAttribute("aria-label", `project ${realIndex + 1}`);
+  });
+
+  // Встановлюємо початкове посилання
+  btnLink.href = projectLinks[swiper.realIndex];
   </script>
 
   <!-- <script type="module" src="./html.js"></script> -->

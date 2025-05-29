@@ -12,22 +12,9 @@
           </p>
         </li>
         <li class="main-about-block">
-          <img
-            class="my-photo"
-            srcset="
-              ./img/about/mobile-about.png      343w,
-              ./img/about/tablet-about.png      704w,
-              ./img/about/desktop-about.png     680w,
-              ./img/about/mobile-about@2x.png   686w,
-              ./img/about/tablet-about@2x.png  1408w,
-              ./img/about/desktop-about@2x.png 1360w
-            "
-            sizes="(min-width: 1440px) 680px, (min-width: 768px) 704px, (max-width: 767px) 343px"
-            src="./img/about/desktop-about.png"
-            alt="me"
-          />
+          <canvas id="matrixCanvas"></canvas>
         </li>
-      </ul>
+        </ul>
     </div>
     <div class="container-about">
       <ul class="accordion-list">
@@ -42,15 +29,16 @@
           </div>
           <div class="accordion-description">
             <p class="accordeon-text-content">
-              I am Lloyd Jefferson, a talented programmer with extensive
-              expertise in software development. I have an understanding of
-              different programming languages and technologies, always ready to
-              improve my skills. I always follow the latest trends and look for
-              unconventional, creative solutions to problems. I have a high
-              level of analytical skills and am able to effectively solve even
-              the most difficult tasks encountered on the way.
+              I Ihor Yaremko, a programmer with extensive expertise in software
+              development.Front and Back End Developer with experience in
+              building and enhancing responsive websites. Skilled in JavaScript,
+              TypeScript, HTML/CSS, and modern frameworks to deliver interactive
+              and user-centered web solutions. Adept at optimizing performance,
+              improving UI/UX, and collaborating with teams to meet both
+              technical and business goals. I have an understanding of different
+              programming languages and technologies, always ready to improve my
+              skills.
             </p>
-
             <p class="accordeon-text-content">
               Able to work both independently and in a team. I can effectively
               cooperate with colleagues, exchanging ideas and finding optimal
@@ -76,8 +64,8 @@
           </div>
           <div class="accordion-description">
             <p class="accordeon-text-content">Frontend development</p>
+            <p class="accordeon-text-content">Backend development</p>
             <p class="accordeon-text-content">HeadlessCMS,Wordpress</p>
-            <p class="accordeon-text-content">Blender(enjoy)</p>
           </div>
         </li>
         <li class="accordion-element">
@@ -91,16 +79,13 @@
           </div>
           <div class="accordion-description">
             <p class="accordeon-text-content">
-              2018 - 2019 / Frontend Development Diploma, GoIT IT <br />School,
-              New York
+              2021 - 2015 / Сomputer Science, Junior Bachelor <br />
+              LFKHPP NUHT, Lviv
             </p>
             <p class="accordeon-text-content">
-              2019 - 2020 / Advanced Web Development Certificate, GoIT IT<br />
-              School, New York
+              2023 - 2024 / Full-stack developer Certificate, GoIT IT<br />
             </p>
-            <p class="accordeon-text-content">
-              2020 - 2022 / Advanced Blender Animation Techniques, Udemy
-            </p>
+            <p class="accordeon-text-content">2024 - 2025 / Internship, Lviv</p>
           </div>
         </li>
       </ul>
@@ -127,7 +112,10 @@
             <p class="skill-name">Figma</p>
           </li>
           <li class="swiper-slide skill-slide">
-            <p class="skill-name">Soft Skills</p>
+            <p class="skill-name">MongoDB</p>
+          </li>
+          <li class="swiper-slide skill-slide">
+            <p class="skill-name">TypeScript</p>
           </li>
         </ul>
       </div>
@@ -142,4 +130,41 @@
       </div>
     </div>
   </div>
+<script>
+  const canvas = document.getElementById("matrixCanvas");
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  resizeCanvas();
+  window.addEventListener("resize", resizeCanvas);
+
+  const chars = "01";
+  const fontSize = 32; // ЗБІЛЬШЕНИЙ розмір цифр
+  const columns = Math.floor(window.innerWidth / fontSize) + 1;
+  const drops = Array(columns).fill(1);
+
+  function draw() {
+    ctx.fillStyle = "rgba(36, 37, 39, 0.2)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#7432d6";
+    ctx.font = `${fontSize}px monospace`;
+
+    for (let i = 0; i < drops.length; i++) {
+      const char = chars.charAt(Math.floor(Math.random() * chars.length));
+      ctx.fillText(char, i * fontSize, (drops[i] - 1) * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 50);
+</script>
 </section>

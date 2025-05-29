@@ -30,7 +30,7 @@
 }
 
 .red{
-    color: #ED3B44;
+    color: #7432d6;
 }
 
 
@@ -77,7 +77,7 @@
 .send-btn {
     width: 100px;
     height: 100px;
-    background-color: #ED3B44;
+    background-color: #7432d6;
     border-radius: 50px;
     border-style: solid;
     border-color: transparent;
@@ -92,7 +92,7 @@
 }
 
 .send-btn:hover {
-    background-color: #E0373F; 
+    background-color: #49267e; 
 }
 
 /* adress */

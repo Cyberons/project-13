@@ -29,21 +29,39 @@ text-transform: uppercase;
 color: rgba(250, 250, 250, 0.4);
 }
 
+
+
 .btn {
     border-radius: 60px;
     width: 177px;
     height: 555px;
-    background-color: #ED3B44;
-    border: 0 solid #ED3B44;
+    background-color: #7432d6;
+    border: 0 solid #7432d6;
 
     font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
     color: #fafafa;
-
+    transition-duration: 0.3s;
     margin-left: 64px;
     margin-bottom: 64px;
+}
+
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    background-color: #7432d6;;
+}
+
+.icon-arrow:hover,
+.btn::after{
+    background-color: #7432d6;
+    border: 0 solid #7432d6;
+}
+
+.btn:hover,
+.btn::after{
+    background-color: #49267e;
 }
 /* ====================================================== */
 @media screen and (min-width: 320px) and (max-width: 374px){
